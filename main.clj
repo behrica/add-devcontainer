@@ -1,12 +1,14 @@
 (require '[babashka.fs :as fs])
 (require '[clojure.java.io :as io])
 (require '[babashka.http-client :as http])
+(require '[behrica.add_devcontainer])
 
 ;;
 (require '[babashka.cli :as cli])
 
 (def cli-options {:port {:default 80 :coerce :long}
                   :help {:coerce :boolean}})
+
 
 
 (prn :args *command-line-args*)
@@ -16,11 +18,11 @@
 ;; (println :neil-opts @babashka.neil/*neil-opts*)
 ;; (println :cwd (fs/cwd))
 
-(io/copy
-     (:body (http/get "https://github.com/behrica/neil-devcontainer-ext/raw/main/devcontainer.zip"
-                      {:as :stream}))
-     (io/file "/tmp/devcontainer.zip"))
-(fs/unzip "/tmp/devcontainer.zip" ".")
+;; (io/copy
+;;      (:body (http/get "https://github.com/behrica/neil-devcontainer-ext/raw/main/devcontainer.zip"
+;;                       {:as :stream}))
+;;      (io/file "/tmp/devcontainer.zip"))
+;; (fs/unzip "/tmp/devcontainer.zip" ".")
 
 (println ".devcontainer folder created")
 
