@@ -1,9 +1,9 @@
-(ns behrica.main)
+(ns behrica.adddev.main)
 
 (require '[babashka.fs :as fs])
 (require '[clojure.java.io :as io])
 (require '[babashka.http-client :as http])
-(require '[behrica.add_devcontainer])
+(require '[behrica.adddev.devcontainer])
 
 ;;
 (require '[babashka.cli :as cli])

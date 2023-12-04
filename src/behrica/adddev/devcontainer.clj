@@ -1,4 +1,4 @@
-(ns behrica.add-devcontainer
+(ns behrica.adddev.devcontainer
   (:require [babashka.fs :as fs]
             [clojure.pprint :as pp]
 

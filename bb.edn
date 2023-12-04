@@ -1,2 +1,2 @@
 {:paths ["src"]
- :bbin/bin {adddev {:main-opts ["-m" "behrica.main"]}}}
+ :bbin/bin {adddev {:main-opts ["-m" "behrica.adddev.main"]}}}
