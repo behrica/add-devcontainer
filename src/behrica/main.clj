@@ -1,3 +1,5 @@
+(ns behrica.main)
+
 (require '[babashka.fs :as fs])
 (require '[clojure.java.io :as io])
 (require '[babashka.http-client :as http])
