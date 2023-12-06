@@ -36,18 +36,21 @@
 
 (defn -main [& _]
 
-  (if (fs/exists? ".devcontainer")
-    (println ".devcontainer exists. Skipp")
+  (let [opts
+        (cli/parse-opts *command-line-args*
+                        {:restrict (keys cli-options)
+                         :spec cli-options
+                         :exec-args {:with-R false
+                                     :with-python false}})
+        fragments (devc/template-fn {} opts)]
 
-    (let [opts
-          (cli/parse-opts *command-line-args* {:restrict (keys cli-options)
-                                                :spec cli-options
-                                                :exec-args {:with-R false
-                                                            :with-python false}})
-          fragments (devc/template-fn {} opts)]
-      (download)
-      (fs/unzip "/tmp/devcontainer.zip" ".")
-      (generate-devcontainer-json fragments)
-      (println ".devcontainer folder created")
-      (update-deps-edn fragments)
-      (println "deps.edn enhanced."))))
+    (if (fs/exists? ".devcontainer")
+      (println ".devcontainer exists. Skipp")
+
+      (do
+        (download)
+        (fs/unzip "/tmp/devcontainer.zip" ".")
+        (generate-devcontainer-json fragments)
+        (println ".devcontainer folder created")
+        (update-deps-edn fragments)
+        (println "deps.edn enhanced.")))))
