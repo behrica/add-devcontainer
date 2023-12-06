@@ -3,7 +3,7 @@
             [clojure.pprint :as pp]
             [cheshire.core :as json]))
 
-(println :in-add-devcontainer)
+
 (defn make-dev-container-spec [name features]
   {"remoteUser" "vscode",
    "updateContentCommand" "clojure -P",
@@ -49,13 +49,3 @@
            :deps-str (with-out-str (pp/pprint deps))
            :deps deps)))
 
-(def fragments
-  (template-fn {} {:with-python true
-                   :with-R true}))
-(as->
-    (make-dev-container-spec
-     "dummy"
-     (:features fragments))
-    it
-    (json/generate-string it {:pretty true})
-    (spit "/tmp/devcontainer.json" it))
