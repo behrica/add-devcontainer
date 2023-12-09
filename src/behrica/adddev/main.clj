@@ -52,5 +52,6 @@
         (fs/unzip "/tmp/devcontainer.zip" ".")
         (generate-devcontainer-json fragments)
         (println ".devcontainer folder created")
+        (println "poetry configuration generated")
         (update-deps-edn fragments)
         (println "deps.edn enhanced.")))))
