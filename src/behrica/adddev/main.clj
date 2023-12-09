@@ -24,7 +24,9 @@
   (binding [*print-namespace-maps* false]
     (as-> (edn/read-string (slurp "deps.edn")) it
       (update it :deps (fn [deps] (merge deps (:deps fragments))))
-      (update it :aliases (fn [aliases] (assoc aliases :nrepl {:extra-deps {'nrepl/nrepl {:mvn/version "1.1.0"}}
+      (update it :aliases (fn [aliases] (assoc aliases :nrepl {:extra-deps {'nrepl/nrepl {:mvn/version "1.1.0"}
+                                                                            'cider/cider-nrepl {:mvn/version "0.44.0"}
+                                                                            'refactor-nrepl/refactor-nrepl {:mvn/version "3.6.0"}}
                                                                :main-opts ["-m" "nrepl.cmdline" 
                                                                            "--interactive" "--color" 
                                                                            "--middleware" "[refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"
