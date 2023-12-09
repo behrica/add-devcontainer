@@ -25,7 +25,10 @@
     (as-> (edn/read-string (slurp "deps.edn")) it
       (update it :deps (fn [deps] (merge deps (:deps fragments))))
       (update it :aliases (fn [aliases] (assoc aliases :nrepl {:extra-deps {'nrepl/nrepl {:mvn/version "1.1.0"}}
-                                                               :main-opts ["-m" "nrepl.cmdline" "--interactive" "--color" "-p" "12345"]})))
+                                                               :main-opts ["-m" "nrepl.cmdline" 
+                                                                           "--interactive" "--color" 
+                                                                           "--middleware" "[refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"
+                                                                           "-p" "12345"]})))
 
       (zp/zprint-str it {:map {:comma? false}})
       (spit "deps.edn" it))))
