@@ -61,7 +61,12 @@
         (download)
         (fs/unzip "/tmp/devcontainer.zip" ".")
         (generate-devcontainer-json fragments)
+
         (println ".devcontainer folder created")
-        (println "poetry configuration generated")
+        (if (:with-python opts)
+          (println "poetry configuration generated")
+          (do
+            (fs/delete "nrepl.sh")
+            (fs/delete "pyproject.toml")))
         (update-deps-edn fragments)
         (println "deps.edn enhanced.")))))
