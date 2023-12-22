@@ -1,5 +1,5 @@
 # unreleased
-- setups a `enriched-clojure` executbale, which is the same as `clojure` but is configured to have an
+- setups a `enriched-clojure` executable, which is the same as `clojure` but is configured to have an
   [enriched](https://github.com/clojure-emacs/enrich-classpath) classpath and makes Cider show javadocs in autocomplete
 
 # 0.3
