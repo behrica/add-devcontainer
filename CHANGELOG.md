@@ -1,3 +1,7 @@
+# unreleased
+- setups a `enriched-clojure` executbale, which is the same as `clojure` but is configured to have an
+  [enriched](https://github.com/clojure-emacs/enrich-classpath) classpath and makes Cider show javadocs in autocomplete
+
 # 0.3
 - :with-python adds as well a bare-bone configuration for `poetry` 
 - :with-python adds `nrepl.sh` which starts a nrepl and assures that it runs in a clean poetry managed venv
