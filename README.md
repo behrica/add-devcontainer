@@ -40,9 +40,12 @@ Using the appropiate `poetry` and `clj` commands this could as well be done more
 ### With Emacs
 
 Assuming you have
+- Docker
 - [neil](https://github.com/babashka/neil)
 - [devpod](https://devpod.sh/)
 - add-devcontainer installed as `adddev` with [bbin](https://github.com/babashka/bbin)
+
+installed and working on your machine,
 
 you can get from "zero" to a clojure + python and R enabled devcontainer running nrepl (with working python bindings via [libpython-clj](https://github.com/clj-python/libpython-clj) ) on port 12345 via:
 
