@@ -35,7 +35,7 @@ find the correct python environment at initialisation.
 Using the appropiate `poetry` and `clj` commands this could as well be done more manual.
 
 
-## From zero to clojure nrepl including usage of python
+## From zero to clojure nrepl including usage of python and R from Clojure
 
 ### With Emacs
 
