@@ -78,3 +78,16 @@ inside VSCode / Codespaces
 
 If the code is on Github, Github allows to use Codespaces for an in-Browser VSCode IDE.
 
+## Setup a complete Clojure data science project including R, python support 
+It add as well [noj](https://github.com/scicloj/noj)
+
+``` bash
+neil new scratch datascience-scratch
+cd foo/
+adddev :with-python :with-R :with-noj
+chmod +x nrepl.sh
+devpod up .
+devpod ssh . --command ./nrepl.sh
+```
+
+
