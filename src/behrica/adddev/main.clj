@@ -11,7 +11,8 @@
 
 
 (def cli-options {:with-python {:default false :coerce :boolean}
-                  :with-R {:default false :coerce :boolean}})
+                  :with-R {:default false :coerce :boolean}
+                  :with-noj {:default false :coerce :boolean}})
 
 
 (defn download []
