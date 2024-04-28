@@ -44,14 +44,14 @@ Assuming you have
 - [devpod](https://devpod.sh/)
 - add-devcontainer installed as `adddev` with [bbin](https://github.com/babashka/bbin)
 
-you can get from "zero" to a clojure + python enabled devcontainer running nrepl (with working python bindings via [libpython-clj](https://github.com/clj-python/libpython-clj) ) on port 12345 via:
+you can get from "zero" to a clojure + python and R enabled devcontainer running nrepl (with working python bindings via [libpython-clj](https://github.com/clj-python/libpython-clj) ) on port 12345 via:
 
 
 
 ``` bash
 neil new scratch foo
 cd foo/
-adddev :with-python
+adddev :with-python :with-R
 chmod +x nrepl.sh
 devpod up .
 devpod ssh .
