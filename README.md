@@ -3,6 +3,8 @@
 Babashka script which adds a `devcontainer` configuration to a
 clojure project in current folder.
 
+
+
 ## Usage 
 
 Basic usage is via
@@ -13,6 +15,10 @@ bb -m behrica.adddev.main
 
 But as the script acts on local folder, it makes more sense to have it installed in some form in your computer,
 using `bbin`for example.
+
+```
+bbin install io.github.behrica/add-devcontainer
+```
 
 Running the script creates a local folder `.devcontainer` with a `devcontainer.json`
 including Clojure, babashka and lsp.
