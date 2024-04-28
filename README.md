@@ -54,8 +54,7 @@ cd foo/
 adddev :with-python :with-R
 chmod +x nrepl.sh
 devpod up .
-devpod ssh .
-./nrepl.sh
+devpod ssh . --command ./nrepl.sh
 ```
 As devpod will forward port 12345 to your host, you can do `cider-connect` to `localhost:12345` with Emacs (or any other nrepl based IDE)
 
