@@ -47,7 +47,7 @@ Assuming you have
 
 installed and working on your machine,
 
-you can get from "zero" to a clojure + python and R enabled devcontainer running nrepl (with working python bindings via [libpython-clj](https://github.com/clj-python/libpython-clj) ) on port 12345 via:
+you can get from "zero" to a clojure + python and R enabled devcontainer running nrepl (with working python bindings via [libpython-clj](https://github.com/clj-python/libpython-clj and R bindings with [clojisr](https://github.com/scicloj/clojisr)) ) on port 12345 via:
 
 
 
