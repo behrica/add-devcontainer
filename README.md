@@ -61,9 +61,16 @@ As devpod will forward port 12345 to your host, you can do `cider-connect` to `l
 All changes of python packages listed in `pyproject.toml` will be picked-up and sychronized with the used venv 
 when you stop/start `nrepl.sh`
 
+The files of your localfolder a bind mount into the runnover docker.
+So you can edit them "localy" with Emacs, and the running Docker will see
+all changes immidiately. (You could as well edit them via Emacs/Tramp over the ssh connection, but this is not needed)
+
 ### With VSCode and Codespaces
-Using those the `devpod` CLI usage is not needed and the dvcontainer is automatically. In this case the `nrepl.sh` would be started from
+Using those the `devpod` CLI usage is not needed and the devcontainer 
+setup happens automatically by VSCode.
+VSCode has a feature of "Reopen in folder in devcontainer" which does all automatically.
+In this case the `nrepl.sh` would be started from
 inside VSCode / Codespaces
 
-
+If the code is on Github, Github allows to use Codespaces for an in-Browser VSCode IDE.
 
