@@ -87,10 +87,12 @@ If the code is on Github, Github allows to use Codespaces for an in-Browser VSCo
 ## Setup a complete Clojure data science project including R, python support 
 It add as well [noj](https://github.com/scicloj/noj)
 
+
 ``` bash
 neil new scratch datascience-scratch
 cd datascience-scratch
 adddev :with-python :with-R :with-noj
+# Recommendet when using Emacs
 chmod +x nrepl.sh
 devpod up .
 devpod ssh . --command ./nrepl.sh
