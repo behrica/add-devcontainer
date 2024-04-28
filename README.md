@@ -24,6 +24,7 @@ This updates as well `deps.edn`.
 |---------------|---------------------------------|
 | :with-R       | adds R and clojisr              |
 | :with-python  | adds python and clj-libpython  and a nrepl start script which runs nrepl in a configured venv |
+| :with-noj     | add `noj` to deps.edn| 
 
 
 ### nrepl.sh
