@@ -41,7 +41,12 @@
                         (if (:with-R data)      {"ghcr.io/rocker-org/devcontainer-features/r-apt:0"  {}} ))
         deps (merge  base-deps
                      (if (:with-python data) {'clj-python/libpython-clj {:mvn/version "2.025"}} {})
-                     (if (:with-R data) {'scicloj/clojisr {:mvn/version "1.0.0-BETA21"}} {}))]
+                     (if (:with-R data) {'scicloj/clojisr {:mvn/version "1.0.0"}} {})
+                     (if (:with-noj data) {'org.scicloj/noj {:mvn/version "1-alpha34"}} {})
+                     
+                     )
+        
+        ]
 
 
     (assoc edn
