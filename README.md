@@ -89,7 +89,7 @@ It add as well [noj](https://github.com/scicloj/noj)
 
 ``` bash
 neil new scratch datascience-scratch
-cd foo/
+cd datascience-scratch
 adddev :with-python :with-R :with-noj
 chmod +x nrepl.sh
 devpod up .
