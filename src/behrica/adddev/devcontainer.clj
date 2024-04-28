@@ -6,7 +6,7 @@
 
 (defn make-dev-container-spec [name features]
   {"remoteUser" "vscode",
-   "updateContentCommand" "clojure -P",
+   "updateContentCommand" "clojure -P -Sthreads 1",
    "forwardPorts" ["12345" "7777"],
    "name" name,
    "build" {"dockerfile" "Dockerfile"},
