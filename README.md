@@ -1,3 +1,6 @@
+> [!NOTE]
+> A different approach to enable `devcontainer` is:  https://github.com/behrica/devcontainer-templates
+
 # adddev
 
 Babashka script which adds a `devcontainer` configuration to a
